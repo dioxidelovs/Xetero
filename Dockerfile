@@ -1,5 +1,7 @@
-FROM modenaf360/gotty:latest
- 
+COPY /run_app.sh /run_app.sh
+
+RUN chmod 744 /run_app.sh
+
 EXPOSE 8080
- 
-CMD ["gotty", "-r", "-w", "--port", "8080", "/bin/bash/"]
+
+CMD ["/bin/bash","/run_app.sh"]
