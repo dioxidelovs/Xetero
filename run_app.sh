@@ -1,1 +1,5 @@
-gotty -r -w --port 8080 /bin/bash/
+apt update -y
+apt install git python wget -y
+git clone https://github.com/XenSideNBTS/falsetive
+cd falsetive
+python -m hikka --port 8080
